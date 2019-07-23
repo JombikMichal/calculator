@@ -1,3 +1,5 @@
+package com.mjcode;
+
 public class Operands {
     private final double left;
     private final double right;

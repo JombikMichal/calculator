@@ -1,4 +1,4 @@
-package operation;
+package com.mjcode.operation;
 
 public class Addition implements IOperation {
 

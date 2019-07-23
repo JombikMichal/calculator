@@ -1,1 +1,1 @@
-# calculator
+# com.mjcode.calculator
