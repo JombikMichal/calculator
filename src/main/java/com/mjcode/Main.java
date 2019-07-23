@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         CalculatorHolder calculatorHolder = new CalculatorHolder();
-        System.out.println("Hello " +  Math.pow(4,2));
+        System.out.println("Hello " +  Math.sqrt(4.0));
 
         do{
             System.out.println("Write number, then type of com.mjcode.operation (+,-,*,/) i.e.: 6/2 or 3+3");

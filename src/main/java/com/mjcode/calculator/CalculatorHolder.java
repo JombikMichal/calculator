@@ -33,6 +33,7 @@ public class CalculatorHolder {
                 "ProfessionalCalculator",
                 new HashMap<>(){{
                     put('^', new Power());
+                    put('√', new Squere());
                 }}
         );
     }
@@ -50,6 +51,7 @@ public class CalculatorHolder {
             case '/':
                 return advancedCalculator;
             case '^':
+            case '√':
                 return profesionalCalculator;
             default:
                 throw  new IllegalArgumentException("Unsupported operation");

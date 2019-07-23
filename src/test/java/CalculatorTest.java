@@ -8,6 +8,7 @@ public class CalculatorTest {
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
     private Operands operands = new Operands(10.0,5.0);
     private Operands operandsExp = new Operands(2.0,2.0);
+    private Operands operandsSqrt = new Operands(0.0,4.0);
 
     @Test
     public void addition(){
@@ -41,6 +42,13 @@ public class CalculatorTest {
     public void power(){
         final double result = calculatorHolder.calculate(operandsExp,'^');
         final double expectedResult = 4;
+        Assert.assertEquals(expectedResult,result,0);
+    }
+
+    @Test
+    public void squere(){
+        final double result = calculatorHolder.calculate(operandsSqrt,'√');
+        final double expectedResult = 2;
         Assert.assertEquals(expectedResult,result,0);
     }
 
