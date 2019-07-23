@@ -1,16 +1,14 @@
 package com.mjcode.calculator;
 
 import com.mjcode.Operands;
-import com.mjcode.operation.Addition;
-import com.mjcode.operation.Division;
-import com.mjcode.operation.Multiplication;
-import com.mjcode.operation.Subtraction;
+import com.mjcode.operation.*;
 
 import java.util.HashMap;
 
 public class CalculatorHolder {
     private BasicCalculator basicCalculator;
     private AdvancedCalculator advancedCalculator;
+    private ProfessionalCalculator profesionalCalculator;
 
     public CalculatorHolder(){
         initializeCalculators();
@@ -31,6 +29,12 @@ public class CalculatorHolder {
                     put('/', new Division() );
                 }}
         );
+        this.profesionalCalculator = new ProfessionalCalculator(
+                "ProfessionalCalculator",
+                new HashMap<>(){{
+                    put('^', new Power());
+                }}
+        );
     }
 
     public double calculate(Operands operands, Character operator){
@@ -45,6 +49,8 @@ public class CalculatorHolder {
             case '*':
             case '/':
                 return advancedCalculator;
+            case '^':
+                return profesionalCalculator;
             default:
                 throw  new IllegalArgumentException("Unsupported operation");
         }

@@ -7,6 +7,7 @@ public class CalculatorTest {
 
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
     private Operands operands = new Operands(10.0,5.0);
+    private Operands operandsExp = new Operands(2.0,2.0);
 
     @Test
     public void addition(){
@@ -33,6 +34,13 @@ public class CalculatorTest {
     public void division(){
         final double result =  calculatorHolder.calculate(operands,'/');
         final double expectedResult = 2;
+        Assert.assertEquals(expectedResult,result,0);
+    }
+
+    @Test
+    public void power(){
+        final double result = calculatorHolder.calculate(operandsExp,'^');
+        final double expectedResult = 4;
         Assert.assertEquals(expectedResult,result,0);
     }
 

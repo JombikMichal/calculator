@@ -8,9 +8,12 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
 
+
+
     public static void main(String[] args) {
 
         CalculatorHolder calculatorHolder = new CalculatorHolder();
+        System.out.println("Hello " +  Math.pow(4,2));
 
         do{
             System.out.println("Write number, then type of com.mjcode.operation (+,-,*,/) i.e.: 6/2 or 3+3");
@@ -31,4 +34,6 @@ public class Main {
         } while (true);
 
     }
+
+
 }
